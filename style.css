@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: white;
+  min-height: 100vh;
+  background: url('assets/bg_clear_day.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 18px;
+  background: rgba(0,0,0,0.3);
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+/* Sections */
+section {
+  background: rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 18px;
+  width: 90%;
+  max-width: 520px;
+  margin: 18px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+/* Relógio configuracoes */
+.clock {
+  position: relative;
+  width: 80px;      
+  height: 80px;
+  margin: 20px auto 10px auto;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6),
+              0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.clock .hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  background: #fff;
+  border-radius: 4px;
+}
+
+.clock .hand.hour {
+  width: 6px;
+  height: 25px;   /* ponteiro das horas menor */
+  background: #fff;
+}
+
+.clock .hand.minute {
+  width: 4px;
+  height: 30px;   /* ponteiro dos minutos maior */
+  background: #0ff;
+}
+
+.clock .hand.second {
+  width: 2px;
+  height: 30px;   /* ponteiro dos segundos ainda maior */
+  background: #f00;
+}
+
+.clock .center {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+
+/* Form input */
+.form-input-container { display:flex; justify-content:center; margin:12px 0; }
+.form-input-container input {
+  padding:10px; border:none; border-radius:6px; outline:none; width:70%; max-width:260px;
+}
+.form-input-container button {
+  background:#fff; border:none; border-radius:6px; margin-left:8px; padding:10px 14px; cursor:pointer;
+}
+.form-input-container button:hover { background:#ddd; }
+
+/* Weather data */
+#weather-data h2 { display:flex; justify-content:center; align-items:center; gap:8px; margin-bottom:8px; font-size:1.1em; }
+#weather-data h2 img { height:22px; }
+#temperature { font-size:2em; font-weight:700; margin-bottom:8px; }
+#description-container { display:flex; justify-content:center; align-items:center; gap:8px; margin:10px 0; }
+#weather-icon { width:50px; height:50px; }
+#details-container { display:flex; justify-content:space-around; margin-top:10px; font-size:0.95em; }
+
+/* Footer */
+footer { text-align:center; padding:12px; background: rgba(0,0,0,0.3); font-style:italic; font-size:0.9em; }
+
+/* Responsivo */
+@media (max-width:768px) {
+  section { width:95%; padding:14px; }
+  .clock { width:120px; height:120px; }
+}

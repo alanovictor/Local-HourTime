@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Time & Hour</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FontAwesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Time & Hour</h1>
+  </header>
+
+  <section>
+    <h2>Horário Local</h2>
+    <div id="msg">Carregando horário...</div>
+
+    <!-- Relógio analógico -->
+    <div class="clock" aria-hidden="true">
+      <div class="hand hour" id="hour"></div>
+      <div class="hand minute" id="minute"></div>
+      <div class="hand second" id="second"></div>
+      <div class="center"></div>
+    </div>
+  </section>
+
+  <section id="prev">
+    <div class="container">
+      <div class="form">
+        <h2>Previsão do Tempo</h2>
+        <p>Digite o nome de uma cidade para ver o clima atual.</p>
+
+        <div class="form-input-container">
+          <input type="text" placeholder="Digite o nome da cidade" id="city-input" />
+          <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div id="weather-data">
+          <h2>
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="city">Cidade</span>
+            <img src="" alt="Bandeira do país" id="country">
+          </h2>
+          <p id="temperature"><span>--</span>&deg;C</p>
+        </div>
+
+        <div id="description-container">
+          <p id="description">--</p>
+          <img src="" alt="Condições do tempo" id="weather-icon">
+        </div>
+
+        <div id="details-container">
+          <p id="humidity"><i class="fa-solid fa-droplet"></i> <span>--%</span></p>
+          <p id="wind"><i class="fa-solid fa-wind"></i> <span>-- km/h</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p id="nome">&copy; Victor Alano da Silva</p>
+  </footer>
+</body>
+
+</html>

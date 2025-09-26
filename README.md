@@ -33,8 +33,8 @@ This project was developed with the following technologies:<br>
 É uma página web, que mostra como está o tempo e as horas de um local especifico.<br>
 It is a web page that shows the weather and time of a specific location.
 
-- [Access the finished project online](https://alanovictor.github.io/????/)<br>
-- [Acesse o projeto finalizado online](https://alanovictor.github.io/????/)
+- [Access the finished project online](https://alanovictor.github.io/Local-HourTime/)<br>
+- [Acesse o projeto finalizado online](https://alanovictor.github.io/Local-HourTime/)
 
 
 ## :memo: License-Licença
